@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<br>
+
+{% for post in posts %}
+<div style="width:30%;background-color:SlateBlue;float:left;margin:5px;border:1px solid black;padding:25px;">
+    <p style="font-family:Arial;color:white;font-size:45px">{{post.title}}</p>
+    <p style="font-family:Arial;font-size:24px;color:white">{{post.content}}</p>
+    <p style="font-family:Arial;font-size:10px;color:white">{{post.publishDate}}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
