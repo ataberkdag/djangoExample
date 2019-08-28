@@ -1,2 +1,2 @@
-# djangoExample
+# Django Example
 Django Example
