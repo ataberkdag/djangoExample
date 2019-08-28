@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Home
+Post Home
 {% endblock %}
 
 {% block content %}
 <br>
 
 {% for post in posts %}
-<div style="width:30%;background-color:SlateBlue;float:left;margin:5px;border:1px solid black;padding:25px;">
-    <p style="font-family:Arial;color:white;font-size:45px">{{post.title}}</p>
-    <p style="font-family:Arial;font-size:24px;color:white">{{post.content}}</p>
+<div style="width:28%;background-color:SlateBlue;float:left;margin:5px;border:1px solid black;padding:25px;">
+    <p style="font-family:Arial;font-size:45px"><a id="link"href="{% url 'post:detail' id=post.id %}" style="text-decoration:none;color:white;">{{post.title}}</a></p>
+    <p style="font-family:Arial;font-size:24px;color:white">{{post.summary}}</p>
     <p style="font-family:Arial;font-size:10px;color:white">{{post.publishDate}}</p>
 </div>
 {% endfor %}
